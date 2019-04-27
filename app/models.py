@@ -1,4 +1,4 @@
-from . import db 
+from . import db   
 from werkzeug.security import generate_password_hash,check_password_hash
 from flask_login import UserMixin
 from . import login_manager
@@ -34,8 +34,6 @@ class User(UserMixin,db.Model):
 	password_hash = db.Column(db.String(255))
 	pass_secure = db.Column(db.String(255))
 	blog = db.relationship('Blog',backref='blog',lazy="dynamic")  
-    comments = db.relationship('Comments',backref = 'user',lazy = "dynamic") 
-    
     
     
     @property
@@ -44,17 +42,16 @@ class User(UserMixin,db.Model):
 
 
     @password.setter
-    def password(self, password):
+     def password(self, password):
         self.pass_secure = generate_password_hash(password)  
 
 
-    def verify_password(self,password):
+     def verify_password(self,password):
         return check_password_hash(self.pass_secure,password)  
 
 
-    def __repr__(self):
+     def __repr__(self):
         return f'User {self.username}'  
-
 
 
 
@@ -66,12 +63,12 @@ class Blog(UserMixin,db.Model):
     category = db.Column(db.String(255))
     posted = db.Column(db.DateTime,default=datetime.utcnow)
     user_id = db.Column(db.Integer,db.ForeignKey("users.id"))
-    comment = db.relationship('Comments',backref = 'blog',lazy = "dynamic")  
+ 
 
 
     def save_blog(self):
-	db.session.add(self)
-	db.session.commit()   
+	  db.session.add(self)
+	  db.session.commit()   
 
 
 
@@ -86,5 +83,5 @@ class Comments(UserMixin,db.Model):
 
 
     def save_comments(self):
-        db.session.add(self)
-        db.session.commit()      
+      db.session.add(self)
+      db.session.commit()      
