@@ -1,0 +1,2 @@
+Hallo {{user.username}}
+Herzlich willkommen in der Blog-App. Wir bieten das Beste

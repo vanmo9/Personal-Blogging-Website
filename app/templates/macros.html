@@ -1,0 +1,6 @@
+{% macro displayBlog(blog) %}
+
+    {% for blog in blog %}
+        <p> {{ blog.blog }}</p>
+    {% endfor %}
+{% endmacro %}
