@@ -34,7 +34,7 @@ def new_blog():
 def new_comment():
 	form = CommentForm()
 	if form.validate_on_submit():
-		comment = Comments (comment=form.comment.data)
+		comment = Comment (title=form.comment.data)
 		comment.save_comments()
 		return redirect(url_for('main.index'))
 	return render_template('comments.html',form=form)

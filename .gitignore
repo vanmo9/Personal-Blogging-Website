@@ -1,4 +1,5 @@
 virtual/
 *.pyc
 instance/
-start.sh/
+start.sh
+__pycache__
