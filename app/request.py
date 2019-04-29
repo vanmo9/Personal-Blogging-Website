@@ -1,7 +1,7 @@
-import request
+# import request
 
-def random_post():
-    url='http://quotes.stormconsultancy.co.uk/random.json'
-    pos= requests.get(url)
-    posts= pos.json()
-    return posts   
+# def random_post():
+#     url='http://quotes.stormconsultancy.co.uk/random.json'
+#     pos= requests.get(url)
+#     posts= pos.json()
+#     return posts   

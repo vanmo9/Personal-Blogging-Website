@@ -1,30 +1,27 @@
 from flask import render_template,request,redirect,url_for,abort
-from ..models import User,Pitches,Comments
+from ..models import User,Blog,Comment
 from . import main
 from ..request import *
 from flask_login import login_required, current_user
-from . forms import CommentForm,PitchesForm
-
-
-
-
+from . forms import CommentForm,BlogForm
+from ..email import mail_message
+from .. import db
 
 
 
 
 @main.route('/')
 def index():
-	'''
-	View root page function that returns the index page and its data
-    '''
 
+    '''
+	View root page function that returns the index page and its data
+	'''
 
     index=Blog.query.all()
 
+    
 
     return render_template('index.html',index=index)
-
-
 
 @main.route('/blog', methods = ['GET','POST'])
 @login_required

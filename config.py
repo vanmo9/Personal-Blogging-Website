@@ -1,11 +1,12 @@
-import os   
+import os
+
 
 class Config:
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://@localhost/mo'
-    SECRET_KEY=os.environ.get("SECRET_KEY")
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://mohamed:moha@localhost/blogs'
+    SECRET_KEY = os.environ.get("SECRET_KEY")
     #  email configurations
 
-    # We setup the SMTP server and configure the port to use the gmail SMTP server port. 
+    # We setup the SMTP server and configure the port to use the gmail SMTP server port.
     MAIL_SERVER = 'smtp.googlemail.com'
     MAIL_PORT = 587
     # Then we set MAIL_USE_TLS configuration to true which enables a transport layer security to secure the emails when sending the emails.
@@ -14,22 +15,26 @@ class Config:
     MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
     MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
 
-   
+    @staticmethod
+    def init_app(app):
+        pass
 
 
-
-class ProdConfig(Config):  
+class ProdConfig(Config):
 
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
 
     pass
 
 
-class DevConfig(Config):  
+class DevConfig(Config):
+
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://mohamed:moha@localhost/blogs'
 
     DEBUG = True
 
-config_options = { 
-'development':DevConfig,
-'production':ProdConfig
+
+config_options = {
+    'development': DevConfig,
+    'production': ProdConfig
 }

@@ -11,7 +11,7 @@
     {% if user.bio %}
       <p> {{user.bio}}</p>
     {%else%}
-      <p> {{user.username| capitalize}} has no bio </p>
+      <p> {{user.username| capitalize}} Please Create A  Bio </p>
     {% endif %}
    </div>
 
@@ -26,6 +26,9 @@
   </div>
   {% if user == current_user %}
     <a href="{{url_for('main.update_pic',uname=user.username)}}">Edit profile</a>
+
+    <input type="file"  name="photo" class="form-control" required>
+    <input type="submit">
   {% endif %}
   </div>
 </div>
