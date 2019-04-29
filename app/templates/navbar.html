@@ -1,9 +1,12 @@
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-<nav class="navbar navbar-dark bg-dark">
-    <div class="container-fluid">
-        <div class="navbar-header">
+
+
+<!-- Navbar Warning -->
+<nav class="navbar navbar-expand-lg bg-warning">
+    <div class="container">
+       <div class="navbar-header">
            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
@@ -12,18 +15,47 @@
            </button>
            <a class="navbar-brand" href="/"> HOME </a>
         </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="/">BLOG</a></li>
-        </div>
+      <div class="navbar-translate">
+        <a class="navbar-brand" href="#pablo">BLOG</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#example-navbar-warning" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-bar bar1"></span>
+          <span class="navbar-toggler-bar bar2"></span>
+          <span class="navbar-toggler-bar bar3"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="example-navbar-warning">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#pablo">
+              <i class="fab fa-facebook-square"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#pablo">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#pablo">
+              <i class="fab fa-google-plus"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#pablo">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
         <ul class="nav navbar-nav navbar-right">
-         {% if current_user.is_authenticated %}
-         <li style="color:#9aa0d3;padding:15px;">{{current_user.username}}</li>
-         <li><a href="{{url_for('auth.logout')}}">Sign out</a></li>   
-         {% else %}
-         <li><a href="{{url_for('auth.login')}}"><i class="fas fa-sign-in-alt"></i></a></li>
-         {%endif%}
-       </ul>
+            {% if current_user.is_authenticated %}
+            <li style="color:#9aa0d3;padding:15px;">{{current_user.username}}</li>
+            <li><a href="{{url_for('auth.logout')}}">Sign out</a></li>   
+            {% else %}
+            <li><a href="{{url_for('auth.login')}}"><i class="fas fa-sign-in-alt"></i></a></li>
+            {%endif%}
+        </ul>
+      </div>
     </div>
-</nav>
+  </nav>
+  <!-- End Navbar Warning -->
 

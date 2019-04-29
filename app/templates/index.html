@@ -3,63 +3,140 @@
 
 {% block content %}
 
-<!-- <body style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDVbOoYdvo_TNYFR4QoDch3iAryBbIris7rgOI07RRb4UJe-ZQ'); background-repeat: no-repeat; background-size: cover;"> -->
 
 
+
+
+  <div class="w3-container" style='background-color: #C4CDC5'>
+    <div class="welcome" style="height: 300px;text-align: center;margin:0 auto;">
+      <br>
+      <br>
+    
+    
+      <h1 style="color:#1F0342;">Study Less, Study Smart: The Best Ways to Retain More in Less Time<br> WELCOME TO MY BLOG</h1>
+      <br>
+      
+
+
+      <button class="btn btn-link btn-warning">Herzlich willkommen</button>
+      <br>
+      <button class="btn btn-link btn-warning">Subscribe</button>
+    </div>
+
+
+
+
+<!-- 
 <div class="card-deck">
     <div class="card">
-      <!-- <img src="https://popcorngala.files.wordpress.com/2015/01/leo-pic.jpg?w=300&h=300" class="card-img-top" alt="leonardo"> -->
       <div class="card-body">
         <h5 class="card-title">Leonardo DiCaprio</h5>
         <p class="card-text">If you can do what you do best and be happy, you’re further along in life than most people.</p>
         <p class="card-text">Relly good one</p>
         <p class="card-text"><small class="text-muted">Last updated 10 mins ago</small></p>
-        <button type="button" class="fas fa-blog"><a href ="/blog"></a></button>   
-        <button type="button" class="far fa-comments"><a href ="/comments"></a></button>
+        <a href ="/blog"><button type="button" class="fas fa-blog"></button></a>  
+        <a href ="/comments"><button type="button" class="far fa-comments"></button></a>  
       </div>
     </div>
 
     <div class="card">
-      <!-- <img src="https://d3kq2xhl2rew87.cloudfront.net/user/image/8/5/5/250x250/hodor_got_hbo_1200_3uEa2M0.jpg" class="card-img-top" alt="snow"> -->
       <div class="card-body">
         <h5 class="card-title">Jon Snow</h5>
         <p class="card-text">I don't ever want t' leave this cave, Jon Snow. Not ever </p>
         <p class="card-text">Had to think really</p>
         <p class="card-text"><small class="text-muted">Last updated 8 mins ago</small></p>
-        <button type="button" class="fas fa-blog"><a href ="/blog"></a></button>   
-        <button type="button" class="far fa-comments"><a href ="/comments"></a></button>
+        <a href ="/blog"><button type="button" class="fas fa-blog"></button></a>  
+        <a href ="/comments"><button type="button" class="far fa-comments"></button></a>  
       </div>
     </div>
 
     <div class="card">
-      <!-- <img src="https://www.nndb.com/people/592/000346551/emilia-clarke-2-sized.jpg" class="card-img-top" alt="clarke"> -->
+      
       <div class="card-body">
         <h5 class="card-title">Emilia Clarke</h5>
         <p class="card-text">My father always said, 'Never trust anyone whose TV is bigger than their book shelf' - so I make sure I read.</p>
         <p class="card-text">True</p>
         <p class="card-text"><small class="text-muted">Last updated 5 mins ago</small></p>
-        <button type="button" class="fas fa-blog"><a href ="/blog"></a></button>   
-        <button type="button" class="far fa-comments"><a href ="/comments"></a></button>
+        <a href ="/blog"><button type="button" class="fas fa-blog"></button></a>  
+        <a href ="/comments"><button type="button" class="far fa-comments"></button></a>  
       </div>
     </div>
-  </div>
+  </div> -->
+  <div class="w3-row-padding">    
+      
+      <div class="w3-third">      
+      
+        <div class=" w3-card w3-padding-32 w3-margin-bottom " style="background-color:#1F0342"> 
+         
+          <div class="w3-container">
+            <h5 class="card-title">Leonardo DiCaprio</h5>
+            <p class="card-text">If you can do what you do best and be happy, you’re further along in life than most people.</p>
+            <p class="card-text">Relly good one</p>
+            <p class="card-text"><small class="text-muted">Last updated 10 mins ago</small></p>
+            <a href ="/blog"><button type="button" class="fas fa-blog"></button></a>  
+            <a href ="/comments"><button type="button" class="far fa-comments"></button></a>  
+          </div>
+        </div>        
+      
+      </div>
+      <div class="w3-third">      
+      
+          <div class=" w3-card w3-padding-32 w3-margin-bottom " style="background-color:#1F0342"> 
+           
+            <div class="w3-container">
+              <h5 class="card-title">Jon Snow</h5>
+              <p class="card-text">I don't ever want t' leave this cave, Jon Snow. Not ever</p>
+              <p class="card-text">Had to think really</p>
+              <p class="card-text"><small class="text-muted">Last updated 7 mins ago</small></p>
+              <a href ="/blog"><button type="button" class="fas fa-blog"></button></a>  
+              <a href ="/comments"><button type="button" class="far fa-comments"></button></a>  
+            </div>
+          </div>        
+        
+        </div>
+        <div class="w3-third">      
+      
+            <div class=" w3-card w3-padding-32 w3-margin-bottom " style="background-color:#1F0342"> 
+             
+              <div class="w3-container">
+                <h5 class="card-title">Emilia Clarke</h5>
+                <p class="card-text">My father always said, 'Never trust anyone whose TV is bigger than their book shelf' - so I make sure I read.</p>
+                <p class="card-text">True</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <a href ="/blog"><button type="button" class="fas fa-blog"></button></a>  
+                <a href ="/comments"><button type="button" class="far fa-comments"></button></a>  
+              </div>
+            </div>        
+          
+          </div>
+      
+    </div>
 
+  <div class="w3-row-padding">
   {% for x in index %}
-
-<div class="card-deck">
-    <div class="card">
-      <!-- <img src="https://d3kq2xhl2rew87.cloudfront.net/user/image/8/5/5/250x250/hodor_got_hbo_1200_3uEa2M0.jpg" class="card-img-top" alt="clarke"> -->
-      <div class="card-body">
+  
+  <div class="w3-third">
+   
+  
+    <div class=" w3-card w3-padding-32 w3-margin-bottom " style="background-color:#1F0342"> 
+     
+      <div class="w3-container">
         <h5 class="card-title">{{x.body}}</h5>
         <p class="card-text">{{x.category}}</p>
         <p class="card-text">{{x.Comment}}</p>
         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-        <button type="button" class="fas fa-blog"><a href ="/blog"></a></button>   
-        <button type="button" class="far fa-comments"><a href ="/comments"></a></button>
+        <a href ="/blog"><button type="button" class="fas fa-blog"></button></a>  
+        <a href ="/comments"><button type="button" class="far fa-comments"></button></a>  
+      </div>
     </div>
-</div> 
-
-</body>
-
+     
+  
+  </div>
+  
 {% endfor %}
+</div>
+<p class="w3-center " style="color:#1F0342">{{random.quote}}</p>
 {%endblock%}
+
+
+

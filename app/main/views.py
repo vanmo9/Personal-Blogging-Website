@@ -6,22 +6,17 @@ from flask_login import login_required, current_user
 from . forms import CommentForm,BlogForm
 from ..email import mail_message
 from .. import db
+import requests
+import json
 
 
 
 
 @main.route('/')
 def index():
-
-    '''
-	View root page function that returns the index page and its data
-	'''
-
     index=Blog.query.all()
-
-    
-
-    return render_template('index.html',index=index)
+    random=requests.get('http://quotes.stormconsultancy.co.uk/random.json').json()
+    return render_template('index.html',index=index, random=random)
 
 @main.route('/blog', methods = ['GET','POST'])
 @login_required
