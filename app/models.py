@@ -30,7 +30,7 @@ class User(UserMixin, db.Model):
     email = db.Column(db.String(255), unique=True, index=True)
     password_hash = db.Column(db.String(255))
     pass_secure = db.Column(db.String(255))
-    blogs = db.relationship('Blog', backref='blogs', lazy="dynamic")
+    blogs = db.relationship('Blog', backref='blog', lazy="dynamic")
     comments = db.relationship('Comment', backref='comments', lazy="dynamic")
 
     @property
