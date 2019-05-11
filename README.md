@@ -42,5 +42,5 @@ This is a python web application that allows users to create and share opinions 
 * Email (vanmowha@gmail.com)
 
 
-## License ([MIT License]( ))
+## License ([MIT License](https://github.com/vanmo9/Personal-Blogging-Website/blob/master/LICENSE))
 This project is licensed under the MIT Open Source license, (c) [Mohamed Hassan]( )
